@@ -2,16 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Install-pip-deps') {
             steps {
-                git url: 'https://github.com/xdaavis/tests.git', branch: 'main' // Aizstāj ar savu URL un zaru
-            }
-        }
-        stage('Execute Script') {
-            steps {
-                echo "Executing script"
-                //sh './script.sh'  // Linux/Unix
-                bat 'script.bat' // Windows
+                echo 'Installing all required dependencies...'
+                git url: 'https://github.com/mtararujs/python-greetings', branch: 'main'
+                sh 'ls -la'  // Pēc izvēles: pārbauda failus
+                sh 'pip install -r requirements.txt'
             }
         }
     }
