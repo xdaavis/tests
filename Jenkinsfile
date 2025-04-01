@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: '<your_repository_url>', branch: 'main' // Aizstāj ar savu URL un zaru
+                git url: 'https://github.com/xdaavis/tests.git', branch: 'main' // Aizstāj ar savu URL un zaru
             }
         }
         stage('Execute Script') {
