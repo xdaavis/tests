@@ -10,8 +10,8 @@ pipeline {
         stage('Execute Script') {
             steps {
                 echo "Executing script"
-                sh './script.sh'  // Linux/Unix
-                //bat 'script.bat' // Windows
+                //sh './script.sh'  // Linux/Unix
+                bat 'script.bat' // Windows
             }
         }
     }
