@@ -8,7 +8,7 @@ pipeline {
                 git url: 'https://github.com/mtararujs/python-greetings', branch: 'main'
                 dir("${WORKSPACE}") { // Pievienots dir bloks
                     bat 'dir'  // Windows: pārbauda failus
-                    bat '"C:\\Program Files\\Python312\\Scripts\\pip.exe" install -r requirements.txt'
+                    bat '"C:\Users\davis\AppData\Local\Programs\Python\Python313\Scripts\pip.exe" install -r requirements.txt'
                 }
             }
         }
